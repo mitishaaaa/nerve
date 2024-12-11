@@ -1,0 +1,130 @@
+﻿
+<script src="~/ULayoutAssets/assets/libs/jquery/jquery.min.js"></script>
+
+<script src="~/Page_JS/Nerve.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+    
+
+    /* General Styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    /* Toggle Buttons */
+    .toggle-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .toggle-btn {
+        flex: 1;
+        padding: 10px;
+        margin: 0 5px;
+        border: none;
+        background-color: #e0e0e0;
+        color: #000;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+        .toggle-btn.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+    /* Dropdown */
+    .dropdown-container {
+        margin-bottom: 20px;
+    }
+
+    .date-dropdown {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    /* Strategy Cards */
+    .strategy-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+        .card h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+    /* Empty State */
+    .empty-state {
+        text-align: center;
+        font-size: 16px;
+        color: #777;
+        margin-top: 20px;
+    }
+
+</style>
+
+
+<title>Responsive UI</title>
+
+
+<div>
+    <div class="container">
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" data-view="Bullish">Bullish</button>
+            <button class="toggle-btn" data-view="Bearish">Bearish</button>
+            <button class="toggle-btn" data-view="RangeBound">RangeBound</button>
+            <button class="toggle-btn" data-view="Volatile">Volatile</button>
+        </div>
+        <!-- Date Dropdown -->
+        <div class="dropdown-container">
+            <select id="date-dropdown" class="date-dropdown"></select>
+        </div>
+        <!-- Strategy Cards -->
+        <div id="strategy-container" class="strategy-container">
+            <!-- Cards will be rendered dynamically -->
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</div>
+
+
